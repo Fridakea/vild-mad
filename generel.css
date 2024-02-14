@@ -1,0 +1,31 @@
+/*******reset*******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/**farver**/
+
+body {
+  background-color: #f7f0e6;
+}
+
+footer {
+  background-color: #7c8a79;
+}
+
+h1,
+h2,
+h2 {
+  color: #538a42;
+}
+
+p {
+  color: #331d12;
+}
