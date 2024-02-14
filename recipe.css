@@ -1,0 +1,98 @@
+@media (min-width: 800px) {
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .grid_1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .formular {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+body {
+  max-width: 1000px;
+  margin: auto;
+}
+
+ul li::marker {
+  color: #f79065;
+  list-style-type: circle;
+  font-size: 30px;
+}
+ol li {
+  counter-increment: li;
+}
+
+ol li::before {
+  content: counter(li);
+  color: #f79065;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+}
+
+.formular {
+  background-color: #ffffff;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  gap: 2rem;
+  padding: 30px;
+  border-radius: 80px;
+}
+
+label,
+input,
+textarea,
+select,
+button {
+  display: block;
+}
+input[type="text"],
+input[type="file"],
+textarea {
+  background-color: #f79065;
+  font-size: 1.2rem;
+  color: #605959;
+  border: none;
+  gap: 10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-right: 5px;
+}
+
+.send_knap button[type="submit"] {
+  background-color: #f79065;
+  font-weight: 500;
+  color: #12233f;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2cqw;
+  position: relative;
+  left: 72%;
+  margin-bottom: 2%;
+}
+.send_knap button[type="submit"]:hover {
+  opacity: 80%;
+}
+.formular h3 {
+  font-size: 2rem;
+  color: #331d12;
+  padding-bottom: 30px;
+}
