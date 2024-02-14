@@ -2,19 +2,22 @@
   .grid_1-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .grid_1-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 3rem;
   }
   .formular {
     grid-column: 1/2;
     grid-row: 2/3;
   }
+}
+li {
+  margin: 10px 0 20px 0;
 }
 
 ul li::marker {
@@ -37,13 +40,17 @@ ol li::before {
   direction: rtl;
 }
 
+.facts {
+  text-align: right;
+}
+
 .formular {
   background-color: #f79065;
   margin-top: 50px;
   margin-left: 10px;
   margin-right: 10px;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   padding: 30px;
   border-radius: 80px;
 }
@@ -55,8 +62,7 @@ select,
 button {
   display: block;
 }
-input[type="text"],
-input[type="file"],
+/* input[type="file"], */
 textarea {
   background-color: #fdf8f6;
   font-size: 1.2rem;
@@ -68,25 +74,59 @@ textarea {
   border-radius: 10px;
   padding: 2%;
   margin-right: 5px;
+  font-family: "Open Sans", sans-serif;
 }
 
-.send_knap button[type="submit"] {
-  background-color: #fdf8f6;
+/* input[type="file"]::file-selector-button {
+  padding: 10px;
+  background-color: #fbe6dd;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+} */
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.send_knap button[type="submit"],
+input[type="file"]::file-selector-button {
+  background-color: #fbe6dd;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   color: #605959;
   border-radius: 5px;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 2cqw;
-  position: relative;
+  font-size: 1rem;
+  /* position: relative;
   left: 72%;
-  margin-bottom: 2%;
+  margin-bottom: 2%; */
 }
-.send_knap button[type="submit"]:hover {
+.send_knap button[type="submit"]:hover,
+input[type="file"]::file-selector-button:hover {
   opacity: 80%;
+  cursor: pointer;
 }
 .formular h3 {
   font-size: 2rem;
   color: #fdf8f6;
+}
+
+a {
+  text-decoration: none;
+  color: #fdf8f6;
+}
+a:hover {
+  color: #cabcad;
+}
+
+p,
+h2,
+h3 {
+  margin: 10px 0 20px 0;
 }

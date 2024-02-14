@@ -44,7 +44,7 @@ h3 {
   font-family: "Libre Baskerville", serif;
 }
 h4 {
-  color: var (--action-color);
+  color: var(--action-color);
   font-family: "Libre Baskerville", serif;
 }
 
