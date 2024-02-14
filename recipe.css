@@ -43,7 +43,7 @@ ol li::before {
 }
 
 .formular {
-  background-color: #ffffff;
+  background-color: #f79065;
   margin-top: 50px;
   margin-left: 10px;
   margin-right: 10px;
@@ -63,7 +63,7 @@ button {
 input[type="text"],
 input[type="file"],
 textarea {
-  background-color: #f79065;
+  background-color: #fdf8f6;
   font-size: 1.2rem;
   color: #605959;
   border: none;
@@ -76,9 +76,9 @@ textarea {
 }
 
 .send_knap button[type="submit"] {
-  background-color: #f79065;
+  background-color: #fdf8f6;
   font-weight: 500;
-  color: #12233f;
+  color: #605959;
   border-radius: 5px;
   border: none;
   padding: 10px;
@@ -93,6 +93,5 @@ textarea {
 }
 .formular h3 {
   font-size: 2rem;
-  color: #331d12;
-  padding-bottom: 30px;
+  color: #fdf8f6;
 }
