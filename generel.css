@@ -14,7 +14,7 @@ img {
 /* Variabler */
 :root {
   --background-color: #f7f0e6;
-  --text-color: #331D12;
+  --text-color: #331d12;
   --action-color: #f79065;
   --secondary-color: #7c8a79;
   --tertiary-color: #538a42;
@@ -30,7 +30,9 @@ footer {
   background-color: var(--secondary-color);
 }
 
-h1, h2, h2 {
+h1,
+h2,
+h3 {
   color: var(--tertiary-color);
 }
 
