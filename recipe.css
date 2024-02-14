@@ -17,11 +17,6 @@
   }
 }
 
-body {
-  max-width: 1000px;
-  margin: auto;
-}
-
 ul li::marker {
   color: #f79065;
   list-style-type: circle;

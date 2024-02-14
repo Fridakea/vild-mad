@@ -11,6 +11,13 @@ img {
   display: block;
 }
 
+/**genere**/
+
+body {
+  max-width: 1000px;
+  margin: auto;
+}
+
 /* Variabler */
 :root {
   --background-color: #f7f0e6;
@@ -34,6 +41,10 @@ h1,
 h2,
 h3 {
   color: var(--tertiary-color);
+  font-family: "Libre Baskerville", serif;
+}
+h4 {
+  color: var (--action-color);
   font-family: "Libre Baskerville", serif;
 }
 
