@@ -4,28 +4,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/**farver**/
+/* Variabler */
+:root {
+  --background-color: #f7f0e6;
+  --text-color: #331D12;
+  --action-color: #f79065;
+  --secondary-color: #7c8a79;
+  --tertiary-color: #538a42;
+}
+
+/* farver */
 
 body {
-  background-color: #f7f0e6;
+  background-color: var(--background-color);
 }
 
 footer {
-  background-color: #7c8a79;
+  background-color: var(--secondary-color);
 }
 
-h1,
-h2,
-h2 {
-  color: #538a42;
+h1, h2, h2 {
+  color: var(--tertiary-color);
 }
 
 p {
-  color: #331d12;
+  color: var(--text-color);
 }
