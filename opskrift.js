@@ -7,18 +7,19 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   },
 })
   .then((response) => response.json())
-  .then(showRecipe);
+  .then(showRecipe)
+  .catch((error) => console.error("Fejl ved indlæsning af opskrifter:", error));
 
 function showRecipe(data) {
   console.log("Recipe");
   console.table(data);
 
-  document.querySelector(".opskrift_titel").textContent = data[0].name;
-  document.querySelector(".difficulty").textContent = data[0].difficulty;
-  document.querySelector(".portions").textContent = data[0].portions;
-  document.querySelector(".duration").textContent = data[0].duration;
-  document.querySelector(".ingredients").textContent = data[0].ingredients;
-  document.querySelector(".directions").textContent = data[0].directions;
-  document.querySelector(".tips").textContent = data[0].tips;
-  const imagePath = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe${data.image}.webp`;
+  // Vis kun data, hvis der er mindst én opskrift
+  if (data.length > 0) {
+    const opskrift = data[0];
+
+    opskriftsElement.querySelector(".opskrift_image").src = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe/${opskrift.image}.webp`;
+    opskriftsElement.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
+    opskriftsElement.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
+  }
 }
