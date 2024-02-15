@@ -1,5 +1,9 @@
 console.log("oversigt over alle opskrifter");
 
+// Konstanter og variabler
+const opskriftTemplate = document.querySelector("#opskrifts-template");
+const opskriftsContainer = document.querySelector("#opskrifts-container");
+
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   method: "GET",
   headers: {
@@ -12,14 +16,22 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
 
 function showRecipe(data) {
   console.log("Recipe");
-  console.table(data);
+  console.log(data);
+
 
   // Vis kun data, hvis der er mindst én opskrift
   if (data.length > 0) {
     const opskrift = data[0];
+    console.log(opskrift);
 
-    opskriftsElement.querySelector(".opskrift_image").src = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe/${opskrift.image}.webp`;
-    opskriftsElement.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
-    opskriftsElement.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
+    // Klon templaten til at vise opskrifter
+    let opskriftKlon = opskriftTemplate.cloneNode(true).content;
+    console.log(opskriftKlon);
+
+    opskriftKlon.querySelector(".opskrift_image").src = `images-recepies/${opskrift.image}`;
+    opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
+    opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
+
+    opskriftsContainer.appendChild(opskriftKlon);
   }
 }
