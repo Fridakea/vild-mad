@@ -1,3 +1,5 @@
+console.log("oversigt over alle opskrifter");
+
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   method: "GET",
   headers: {
@@ -5,26 +7,18 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   },
 })
   .then((response) => response.json())
-  .then(showExampleRecipe);
+  .then(showRecipe);
 
-function showRecipes(recipes) {
-  // Finder containeren, hvor opskrifterne skal indsættes
-  const container = document.getElementById("opskrifts-container");
-  // Looper gennem hver opskrift og kalder funktionen 'showRecipe'
-  recipes.forEach((recipe) => showRecipe(recipe, container));
-}
+function showRecipe(data) {
+  console.log("Recipe");
+  console.table(data);
 
-function showRecipe(recipe, container) {
-  // Finder template-elementet i dokumentet
-  const template = document.getElementById("opskrifts-template").content;
-  // Klone det, så vi har et nyt, brugbart element
-  const copy = template.cloneNode(true);
-  // Sætter opskriftsinformation
-  copy.querySelector(".opskrifter_image").src = recipe.billede_url; // Brug det korrekte felt fra din API-respons
-  copy.querySelector(".opskrifter_image").alt = recipe.navn; // Brug det korrekte felt fra din API-respons
-  copy.querySelector(".opskrift_name").textContent = recipe.navn; // Brug det korrekte felt fra din API-respons
-  copy.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${recipe.sæsoner}`; // Brug det korrekte felt fra din API-respons
-
-  // Tilføj elementet til containeren i DOM'en
-  container.appendChild(copy);
+  document.querySelector(".opskrift_titel").textContent = data[0].name;
+  document.querySelector(".difficulty").textContent = data[0].difficulty;
+  document.querySelector(".portions").textContent = data[0].portions;
+  document.querySelector(".duration").textContent = data[0].duration;
+  document.querySelector(".ingredients").textContent = data[0].ingredients;
+  document.querySelector(".directions").textContent = data[0].directions;
+  document.querySelector(".tips").textContent = data[0].tips;
+  const imagePath = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe${data.image}.webp`;
 }
