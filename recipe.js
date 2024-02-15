@@ -17,7 +17,18 @@ function showRecipe(data) {
   document.querySelector(".difficulty").textContent = data[0].difficulty;
   document.querySelector(".portions").textContent = data[0].portions;
   document.querySelector(".duration").textContent = data[0].duration;
-  document.querySelector(".ingredients").textContent = data[0].ingredients;
+
+  const ingredients = data.ingredients;
+
+  const ingredientsList = document.querySelector(".ingredients_container");
+
+  ingredients.forEach(makeIngredientList);
+
+  function makeIngredientList(ingredient) {
+    ingredientsList.innerHTML += "<li>" + ingredient + "</li>";
+  }
+
+  //   document.querySelector(".ingredients").textContent = data[0].ingredients;
   document.querySelector(".directions").textContent = data[0].directions;
   document.querySelector(".tips").textContent = data[0].tips;
   const imagePath = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe${data.image}.webp`;
