@@ -18,14 +18,12 @@ function showRecipe(data) {
   document.querySelector(".portions").textContent = data[0].portions;
   document.querySelector(".duration").textContent = data[0].duration;
 
-  const ingredients = data.ingredients;
+  const ingredientParent = document.querySelector(".ingredients_container");
+  data[0].ingredients.forEach(makeIngredientList);
 
-  const ingredientsList = document.querySelector(".ingredients_container");
-
-  ingredients.forEach(makeIngredientList);
-
-  function makeIngredientList(ingredient) {
-    ingredientsList.innerHTML += "<li>" + ingredient + "</li>";
+  function makeIngredientList(ingredientData) {
+    console.log(ingredientData);
+    ingredientParent.innerHTML += "<li>" + ingredientData + "</li>";
   }
 
   //   document.querySelector(".ingredients").textContent = data[0].ingredients;
