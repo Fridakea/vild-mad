@@ -13,6 +13,7 @@ function showExampleIngredient(dataExample) {
   console.table(dataExample);
 }
 
+// til sammenhæng mellem ingrediens og opskrift
 const ingredientRecipeParam = '?select=*,ingredient_recipe(ingredient(*))';
 
 // Fetch data om opskrifter
