@@ -64,6 +64,15 @@ p {
   flex-direction: row;
 }
 
+.align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.side-gap {
+  column-gap: 25px;
+}
+
 /** fonte ***/
 
 /* // <uniquifier>: Use a uniquifier for the class name
