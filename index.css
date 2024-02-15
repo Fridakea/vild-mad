@@ -21,16 +21,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
-  position: absolute;
-  z-index: 2;
+  /*position: absolute;*/
 }
 header a {
   text-decoration: none;
   color: black;
-  padding-right: 20px;
   font-weight: bold;
   font-size: 1rem;
+  padding: 2rem;
 }
 header ul {
   display: flex;
@@ -51,7 +49,16 @@ header ul {
 }
 
 .logo {
-  width: 20%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 20%;
+  }
 }
 
 /* BURGERMENU */
@@ -64,7 +71,7 @@ header ul {
 .burger .line {
   width: 100%;
   height: 2px;
-  background-color: #333;
+  background-color: white;
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
@@ -141,7 +148,6 @@ header ul {
 
 .sæsoner img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -151,15 +157,10 @@ header ul {
   object-fit: cover;
 }
 
-.hero_forside {
-  z-index: 1;
-}
-
 .sæsoner {
   position: relative;
   margin-bottom: 30px;
   width: 100%;
-  overflow: hidden;
 }
 
 .sæsoner .tekst-container {
@@ -173,4 +174,33 @@ header ul {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-size: 50px;
+}
+
+.kolonne_forside {
+  background-color: #f7f0e6;
+  padding: 6rem;
+}
+
+.scroll-down-btn {
+  position: sticky;
+  top: 20px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 30px;
+  transition: transform 0.2s ease;
+  margin-top: -39px;
+}
+
+.scroll-down-btn::before {
+  content: "";
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(45deg);
 }
