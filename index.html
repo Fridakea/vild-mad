@@ -1,16 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="generel.css">
 </head>
 
 <body>
 
-    <h1>Hej</h1>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo_vildmad.svg" alt="logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="">Foraging in the forest</a></li>
+                <li><a href="">Recipes</a></li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="hero_forside">
+        <img src="images-forside/Untitled design-4.webp" alt="forside">
+        <div class="scroll-down-btn" onclick="scrollToNextSection"></div>
+    </div>
 
+    <div class="kolonne_forside">
+        <h1>Stay informed on creative ways to include wild plants in your cooking. </h1>
+    </div>
+
+    <div class="sæsoner_grid">
+        <div class="sæsoner">
+            <img src="images-forside/winter-7009620_1920.webp" alt="">
+            <div class="tekst-container">
+                <p>Spring</p>
+            </div>
+        </div>
+
+        <div class="sæsoner">
+            <img src="images-forside/Untitled design-4.webp" alt="">
+            <div class="tekst-container">
+                <p>Summer</p>
+            </div>
+        </div>
+
+        <div class="sæsoner">
+            <img src="images-forside/winter-7009620_1920.webp" alt="">
+            <div class="tekst-container">
+                <p>Fall</p>
+            </div>
+        </div>
+
+        <div class="sæsoner">
+            <img src="images-forside/fall-938107_1920.webp" alt="">
+            <div class="tekst-container">
+                <p>Winter</p>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
