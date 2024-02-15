@@ -28,14 +28,40 @@
     text-transform: capitalize;
 }
 
-.ingredient {
-    max-width: 50%;
+.ingredients-overview-container {
+    margin: 0;
+    flex-wrap: wrap;
 
+    & a {
+        min-width: 90px;
+        max-width: 280px;
+        width: 46%;
+    }
+}
+
+.ingredient {
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
 
     & img {
         border-radius: 100%;
+    }
+}
+
+@media (min-width: 650px) {
+    .ingredients-overview-container {
+        gap: 50px;
+
+        & a {
+            max-width: 300px;
+            width: 27%;
+        }
+    }
+}
+
+@media (min-width: 950px) {
+    .ingredients-overview-container a {
+        width: 20%;
     }
 }
