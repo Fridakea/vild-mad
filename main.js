@@ -13,8 +13,10 @@ function showExampleIngredient(dataExample) {
   console.table(dataExample);
 }
 
+const ingredientRecipeParam = '?select=*,ingredient_recipe(ingredient(*))';
+
 // Fetch data om opskrifter
-fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
+fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe" + ingredientRecipeParam, {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5aGd6bnl2b3hodWl3cGV0ZGNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4NDE2NTcsImV4cCI6MjAyMzQxNzY1N30.8sKL9HgJTYSl6pgiZbRHk8qLBjPg9ebrnH6VQft3nx0",
@@ -25,5 +27,5 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
 
 function showExampleRecipe(dataExample) {
   console.log("Recepies");
-  console.table(dataExample);
+  console.log(dataExample);
 }
