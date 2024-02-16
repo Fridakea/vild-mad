@@ -8,6 +8,7 @@
 
 .season-title {
     position: relative;
+    text-align: center;
 
     & img {
         width: 100%;
@@ -16,16 +17,17 @@
         object-fit: cover;
     }
 
-
-    text-align: center;
-
     & h1 {
         position: absolute;
     }
 }
 
-.month-navigation {
+.month-navigation button {
     text-transform: capitalize;
+    padding: 5px 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .ingredients-overview-container {
@@ -45,7 +47,7 @@
     text-transform: capitalize;
 
     & img {
-        border-radius: 100%;
+        border-radius: 10%;
     }
 }
 
