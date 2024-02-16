@@ -26,8 +26,27 @@ function showRecipe(data) {
     ingredientParent.innerHTML += "<li>" + ingredientData + "</li>";
   }
 
+  const directionParent = document.querySelector(".how_to");
+  data[0].directions.forEach(makeDirectionList);
+
+  function makeDirectionList(directionData) {
+    console.log(directionData);
+    directionParent.innerHTML += "<li>" + directionData + "</li>";
+  }
+
+  const tipParent = document.querySelector(".tips");
+  data[0].tips.forEach(makeTipsList);
+
+  function makeTipsList(tipData) {
+    console.log(tipData);
+    tipParent.innerHTML += "<li>" + tipData + "</li>";
+  }
+
+  document.querySelector(".opskrift_billede").src = data[0].image;
+  document.querySelector(".opskrift_billede").alt = `Picture of ${data[0].name} `;
+
   //   document.querySelector(".ingredients").textContent = data[0].ingredients;
-  document.querySelector(".directions").textContent = data[0].directions;
-  document.querySelector(".tips").textContent = data[0].tips;
-  const imagePath = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe${data.image}.webp`;
+  //   document.querySelector(".directions").textContent = data[0].directions;
+  //   document.querySelector(".tips").textContent = data[0].tips;
+  //   const imagePath = `https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe${data.image}.webp`;
 }

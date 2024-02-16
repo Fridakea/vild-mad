@@ -16,8 +16,13 @@
     grid-row: 2/3;
   }
 }
+
+.opskrift_titel {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
 li {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px 30px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -44,6 +49,7 @@ ol li::before {
 .facts {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 10px;
 }
 
 .formular {
@@ -131,7 +137,7 @@ a:hover {
 p,
 h2,
 h3 {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px 10px;
 }
 
 .ingredients_container {
@@ -141,3 +147,7 @@ h3 {
   column-width: 5rem;
   column-gap: 20px;
 }
+
+/* .ingredients_container li:hover {
+  text-decoration: line-through;
+} */
