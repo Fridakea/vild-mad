@@ -22,13 +22,13 @@ header {
   align-items: center;
   justify-content: space-between;
   /*position: absolute;*/
+  padding: 2rem;
 }
 header a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 1rem;
-  padding: 2rem;
 }
 header ul {
   display: flex;
@@ -71,7 +71,7 @@ header ul {
 .burger .line {
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: black;
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
