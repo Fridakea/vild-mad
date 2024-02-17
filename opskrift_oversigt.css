@@ -1,7 +1,46 @@
 #opskrifts-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.opskrift_image {
+  width: 100%; /* Set the width to 100% of the container */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  aspect-ratio: 4/3;
+  padding-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
+.opskrift_name {
+  padding-bottom: 0.7rem;
+}
+
+.opskrift_seasons {
+  padding-bottom: 1rem;
+}
+
+#oversigt {
+  text-align: center;
+  font-size: 24px;
+  color: #333; /* Tekstfarve - ændr efter behov */
+  margin-bottom: 20px; /* Afstand nedenunder elementet - ændr efter behov */
+}
+
+/* Styling til label og select */
+label {
+  font-size: 16px;
+  margin-right: 10px; /* Afstand til højre for label - ændr efter behov */
+  color: #555; /* Tekstfarve - ændr efter behov */
+}
+
+select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Ramme omkring select - ændr efter behov */
+  border-radius: 4px;
+  background-color: #fff; /* Baggrundsfarve - ændr efter behov */
+  color: #333; /* Tekstfarve - ændr efter behov */
 }
