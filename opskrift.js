@@ -4,6 +4,7 @@ console.log("oversigt over alle opskrifter");
 const opskriftTemplate = document.querySelector("#opskrifts-template");
 const opskriftsContainer = document.querySelector("#opskrifts-container");
 const seasonFilter = document.querySelector("#season-filter");
+const typeFilter = document.querySelector("#type-filter");
 let data;
 
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
@@ -14,6 +15,7 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
 })
   .then((response) => response.json())
   .then((fetchedData) => {
+    console.log("Fetched Data:", fetchedData);
     data = fetchedData; // Gem data globalt
     showRecipe(data); // Kald showRecipe med den oprindelige data
   })
@@ -31,6 +33,18 @@ seasonFilter.addEventListener("change", function () {
   showRecipe(filteredData);
 });
 
+// Event listener for type-filteret
+typeFilter.addEventListener("change", function () {
+  // Filtrer opskrifter baseret på den type
+  const selectedType = typeFilter.value;
+
+  // Filtrer opskrifter baseret på den valgte type eller vis alle opskrifter
+  const filteredData = selectedType === "all" ? data : data.filter((opskrift) => opskrift.type.includes(selectedType));
+
+  // Kald showRecipe igen med filtrerede data baseret på valgt sæson
+  showRecipe(filteredData);
+});
+
 function showRecipe(data) {
   console.log("Recipe");
   console.log(data);
@@ -42,13 +56,14 @@ function showRecipe(data) {
   if (data.length > 0) {
     // Iterer gennem hvert element i arrayet
     data.forEach((opskrift) => {
+      console.log("Opskrift Type:", opskrift.type);
       // Klon templaten til at vise opskrifter
       let opskriftKlon = opskriftTemplate.cloneNode(true).content;
 
       opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
       opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
       opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
-
+      opskriftKlon.querySelector(".opskrift_type").textContent = `Type: ${opskrift.type}`;
       opskriftsContainer.appendChild(opskriftKlon);
     });
   }
