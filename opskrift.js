@@ -3,6 +3,8 @@ console.log("oversigt over alle opskrifter");
 // Konstanter og variabler
 const opskriftTemplate = document.querySelector("#opskrifts-template");
 const opskriftsContainer = document.querySelector("#opskrifts-container");
+const seasonFilter = document.querySelector("#season-filter");
+let data;
 
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   method: "GET",
@@ -11,27 +13,43 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   },
 })
   .then((response) => response.json())
-  .then(showRecipe)
+  .then((fetchedData) => {
+    data = fetchedData; // Gem data globalt
+    showRecipe(data); // Kald showRecipe med den oprindelige data
+  })
   .catch((error) => console.error("Fejl ved indlæsning af opskrifter:", error));
+
+// Event listener for sæson-filteret
+seasonFilter.addEventListener("change", function () {
+  // Filtrer opskrifter baseret på den valgte sæson
+  const selectedSeason = seasonFilter.value;
+
+  // Filtrer opskrifter baseret på den valgte sæson eller vis alle opskrifter
+  const filteredData = selectedSeason === "all" ? data : data.filter((opskrift) => opskrift.seasons.includes(selectedSeason));
+
+  // Kald showRecipe igen med filtrerede data baseret på valgt sæson
+  showRecipe(filteredData);
+});
 
 function showRecipe(data) {
   console.log("Recipe");
   console.log(data);
 
+  // Fjern eksisterende opskrifter fra containeren
+  opskriftsContainer.innerHTML = "";
 
   // Vis kun data, hvis der er mindst én opskrift
   if (data.length > 0) {
-    const opskrift = data[0];
-    console.log(opskrift);
+    // Iterer gennem hvert element i arrayet
+    data.forEach((opskrift) => {
+      // Klon templaten til at vise opskrifter
+      let opskriftKlon = opskriftTemplate.cloneNode(true).content;
 
-    // Klon templaten til at vise opskrifter
-    let opskriftKlon = opskriftTemplate.cloneNode(true).content;
-    console.log(opskriftKlon);
+      opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
+      opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
+      opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
 
-    opskriftKlon.querySelector(".opskrift_image").src = `images-recepies/${opskrift.image}`;
-    opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
-    opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
-
-    opskriftsContainer.appendChild(opskriftKlon);
+      opskriftsContainer.appendChild(opskriftKlon);
+    });
   }
 }
