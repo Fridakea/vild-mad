@@ -47,7 +47,8 @@
     text-transform: capitalize;
 
     & img {
-        border-radius: 10%;
+        border-radius: 40%;
+        object-fit: cover;
     }
 }
 
