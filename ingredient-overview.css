@@ -46,7 +46,15 @@
         border: 0;
         background-color: transparent;
         cursor: pointer;
+
+        & h2 {
+            transition: 0.2s;
+        }
     }
+}
+
+.month-filter-group button h2:hover {
+    color: var(--action-color);
 }
 
 .ingredients-overview-container {
