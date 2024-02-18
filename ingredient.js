@@ -8,7 +8,9 @@ const monthFilter = urlParams.get("month");
 function init() {
   console.log("Url Parameter season: ", seasonFilter);
 
-  document.querySelector(`.${seasonFilter}`).classList.add('show');
+  document.querySelector(`.season-title.${seasonFilter}`).classList.add('show');
+  document.querySelector(`.season-container.${seasonFilter}`).classList.add('show');
+  document.querySelector(`.month-filter-group.${seasonFilter}`).classList.add('show');
 
   // Fetch data om ingredienser fra API
   fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/ingredient", {
@@ -40,7 +42,7 @@ function showIngredient(data) {
 
     ingredientClone.querySelector(".ingredient img").src = `images/${ingredientData.image}`
     ingredientClone.querySelector(".ingredient img").alt = `images of ${ingredientData.image}`
-    ingredientClone.querySelector(".ingredient h3").textContent = ingredientData.name
+    ingredientClone.querySelector(".ingredient p").textContent = ingredientData.name
     ingredientClone.querySelector(".ingredient").href = `opskrift_oversigt.html?=${ingredientData.ingredients}`
 
     // Indsæt klonerne i dommen
