@@ -15,8 +15,5 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/ingredient", {
 function showIngredient(data) {
   console.log(data);
 
-  let cloneIngredient = ingredientTemplate.cloneNode(true).textContent;
-  console.log(cloneIngredient);
-
-  document.querySelector("ingredient-template img").src = `images/${data.image}`;
+  document.querySelector(".ingredient img").src = `images/${data.image}`
 }
