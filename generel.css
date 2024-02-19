@@ -250,7 +250,7 @@ header ul {
   }
 
   .menu a:hover {
-    color: #ae6e69;
+    color: var(--action-color);
   }
   .burger {
     display: none;
