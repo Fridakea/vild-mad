@@ -46,8 +46,11 @@
 
 .img-container {
   width: 100%;
-  object-fit: cover;
-  background: center/cover no-repeat;
+  /*aspect-ratio: 16/9;*/
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(images/hero.webp);
 }
 
 .scroll-down-btn {
