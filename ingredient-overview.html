@@ -14,32 +14,144 @@
     <header>
 
     </header>
-    <div class="season-title flex-row align-center">
-        <img src="images/fall-938107_1920.webp" alt="">
+    <div class="season-title flex-row align-center winter">
+        <img src="images/winter-7009620_1920.webp" alt="">
+        <h1>Winter</h1>
+    </div>
+
+    <div class="season-title flex-row align-center spring">
+        <img src="images/Untitled design-4.webp" alt="">
+        <h1>Spring</h1>
+    </div>
+
+    <div class="season-title flex-row align-center summer">
+        <img src="images/Untitled design-4.webp" alt="">
         <h1>Summer</h1>
     </div>
 
+    <div class="season-title flex-row align-center fall">
+        <img src="images/fall-938107_1920.webp" alt="">
+        <h1>Fall</h1>
+    </div>
+
     <main class="content">
-        <div class="season-container">
+        <div class="season-container winter">
+            <h2>Ingredients in the forest during winter</h2>
+            <p>Temperature, available light, and precipitation change tremendously over the course of the year, creating
+                a wide variety of conditions for plant life. When you forage in a deciduous forest, use the season to
+                interpret the landscape. The weather, in other words, will determine
+                whether you return from a coniferous forest with a feast or an empty basket.</p>
+            <p>Once the leaves fall you should set your sights on mushrooms in particular. Keep an eye on temperature
+                and the dampness of the soil (these will determine where mushrooms grow) and remember that mushrooms
+                emerge in the wake of a good rain. Many mushrooms stick around until the first frost sets in, and winter
+                and oyster mushrooms even endure in December.</p>
+        </div>
+
+        <div class="season-container spring">
+            <h2>Ingredients in the forest during spring</h2>
+            <p>Before trees’ leaves open, sunlight reaches the forest floor easily and fosters good growing conditions
+                for wild herbs, onions, spring mushrooms like common morels, and edible flowers like violets. In spring
+                you can forage anywhere in the forest.</p>
+            <p>The first herbs of spring to appear in coniferous forests are white dead nettles and sand leek, which pop
+                up in patches where they can get sunlight. If the soil is a bit damp, you'll also find wood sorrel—not
+                only in spring, but year round. At the end of April you can pick shoots from Scotch pines, and in
+                clearings you may be lucky enough to find newly sprouted rowan leaves. From May saffron milk caps pop up
+                in bright, open areas beyond the tall grass and near Scotch pines.</p>
+        </div>
+
+        <div class="season-container summer">
             <h2>Ingredients in the forest during summer</h2>
-            <p>Description about summer in the forest and ingredients to find... Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Reprehenderit pariatur iure placeat, vitae
-                corrupti blanditiis vel eius. Animi reiciendis amet voluptatum. Enim dignissimos adipisci nihil quidem
-                cupiditate. Adipisci, minus ab!</p>
+            <p>Gathering in coniferous forests is best left for late summer and fall, but if it's been a particularly
+                dry or wet summer, there won't be much to find. That said, it only takes a favorable microclimate to
+                change everything; one good downpour followed by a handful of warm days creates optimal growing
+                conditions for mushrooms. Some mushrooms pop up quickly and in large numbers, but they also dry up again
+                if the heat continues and the environment turns too dry. The weather, in other words, will determine
+                whether you return from a coniferous forest with a feast or an empty basket.</p>
+            <p>As tree crowns develop over the course of summer, they steal most of the sunlight. The herbs of spring
+                wither and die, and sunlight becomes the most important factor to keep in mind while foraging. In shady
+                parts of the forest you’ll find wood sorrel and garlic mustard, while wild raspberries and sweet
+                woodruff grow in clearings, and wild strawberries populate wide open glades. Beginning in June, golden
+                chanterelles pop up in small clearings. Foraging is especially good along forest trails, near fallen
+                trees, and where the forest meets fields and meadows.</p>
+        </div>
+
+        <div class="season-container fall">
+            <h2>Ingredients in the forest during fall</h2>
+            <p>Gathering in coniferous forests is best left for late summer and fall, but if it's been a particularly
+                dry or wet summer, there won't be much to find. That said, it only takes a favorable microclimate to
+                change everything; one good downpour followed by a handful of warm days creates optimal growing
+                conditions for mushrooms. Some mushrooms pop up quickly and in large numbers, but they also dry up again
+                if the heat continues and the environment turns too dry. The weather, in other words, will determine
+                whether you return from a coniferous forest with a feast or an empty basket.</p>
+            <p>In fall, the deciduous forest offers mushrooms, nuts, and fruit. In areas with full sun or a bit of shade
+                you can find ripe blackberries, but once the leaves fall you should set your sights on mushrooms in
+                particular. Keep an eye on temperature and the dampness of the soil (these will determine where
+                mushrooms
+                grow) and remember that mushrooms emerge in the wake of a good rain.</p>
+            <p>Beginning in August, a coniferous forest becomes a real wonderland. The explosion of different varieties
+                of mushrooms makes things really exciting. If it has rained enough and temperatures are still warm,
+                you’ll find Karl Johan mushrooms in clearings
+                and along forest paths. Mushroom season typically lasts until October, or until the first frost sets in.
+            </p>
         </div>
 
         <div class="month-navigation flex-row align-center gap">
-            <button>
-                <h3>month 1</h3>
-            </button>
-            -
-            <button>
-                <h3>month 2</h3>
-            </button>
-            -
-            <button>
-                <h3>month 3</h3>
-            </button>
+            <div class="month-filter-group winter">
+                <button onclick="onMonthFilterClick(12)">
+                    <h2>december</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(1)">
+                    <h2>january</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(2)">
+                    <h2>february</h2>
+                </button>
+            </div>
+
+            <div class="month-filter-group spring">
+                <button onclick="onMonthFilterClick(3)">
+                    <h2>march</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(4)">
+                    <h2>april</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(5)">
+                    <h2>may</h2>
+                </button>
+            </div>
+
+            <div class="month-filter-group summer">
+                <button onclick="onMonthFilterClick(6)">
+                    <h2>june</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(7)">
+                    <h2>july</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(8)">
+                    <h2>august</h2>
+                </button>
+            </div>
+
+            <div class="month-filter-group fall">
+                <button onclick="onMonthFilterClick(9)">
+                    <h2>september</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(10)">
+                    <h2>october</h2>
+                </button>
+                -
+                <button onclick="onMonthFilterClick(11)">
+                    <h2>november</h2>
+                </button>
+            </div>
+
         </div>
 
         <div>
@@ -48,49 +160,14 @@
         </div>
 
         <div class="ingredients-overview-container flex-row gap">
-            <a class="ingredient flex-col" href="#">
-                <img src="images/oyster.webp" alt="">
-                <h3>Oyster</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/blackberry.webp" alt="">
-                <h3>Blackberry</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/blackberry.webp" alt="">
-                <h3>Blackberry</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/oyster.webp" alt="">
-                <h3>Oyster</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/blackberry.webp" alt="">
-                <h3>Blackberry</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/blackberry.webp" alt="">
-                <h3>Blackberry</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/oyster.webp" alt="">
-                <h3>Oyster</h3>
-            </a>
-
-            <a class="ingredient flex-col" href="#">
-                <img src="images/blackberry.webp" alt="">
-                <h3>Blackberry</h3>
-            </a>
+            <template id="ingredient-template">
+                <a class="ingredient flex-col" href="#">
+                    <img src="images/oyster.webp" alt="">
+                    <p>Oyster</p>
+                </a>
+            </template>
         </div>
     </main>
-
-    <footer></footer>
 
     <script src="ingredient.js"></script>
 </body>

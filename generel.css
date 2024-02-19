@@ -11,12 +11,13 @@ img {
   display: block;
 }
 
-/**genere**/
+/** generel **/
 
 main {
   max-width: 1000px;
   margin: auto;
 }
+
 h1 {
   text-align: center;
   margin: 40px 0 40px 0;

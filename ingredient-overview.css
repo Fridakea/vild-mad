@@ -1,9 +1,17 @@
 .content {
-    margin: 25px;
+    padding: 25px;
 
     & div {
         margin-bottom: 25px;
     }
+}
+
+.season-container p {
+    margin-bottom: 20px;
+}
+
+.season-container:not(.show) {
+    display: none;
 }
 
 .season-title {
@@ -13,7 +21,7 @@
     & img {
         width: 100%;
         height: 20vh;
-        filter: opacity(50%);
+        filter: opacity(30%);
         object-fit: cover;
     }
 
@@ -22,12 +30,31 @@
     }
 }
 
-.month-navigation button {
-    text-transform: capitalize;
-    padding: 5px 20px;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
+.season-title:not(.show) {
+    display: none;
+}
+
+.month-navigation {
+    & .month-filter-group:not(.show) {
+        display: none;
+    }
+
+    & button {
+        display: inline-block;
+        text-transform: capitalize;
+        padding: 5px 20px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        & h2 {
+            transition: 0.2s;
+        }
+    }
+}
+
+.month-filter-group button h2:hover {
+    color: var(--action-color);
 }
 
 .ingredients-overview-container {
@@ -45,10 +72,17 @@
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
+    font-weight: bold;
 
     & img {
-        border-radius: 10%;
+        border-radius: 40%;
+        object-fit: cover;
     }
+}
+
+.ingredient img:hover {
+    border-radius: 40%;
+    border: 5px solid var(--action-color);
 }
 
 @media (min-width: 650px) {
