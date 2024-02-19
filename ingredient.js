@@ -43,13 +43,13 @@ function showIngredient(data) {
     const template = document.querySelector("#ingredient-template");
     const ingredientClone = template.cloneNode(true).content;
 
-    ingredientClone.querySelector(".ingredient img").src = `images/${ingredientData.image}`
-    ingredientClone.querySelector(".ingredient img").alt = `images of ${ingredientData.image}`
-    ingredientClone.querySelector(".ingredient p").textContent = ingredientData.name
-    ingredientClone.querySelector(".ingredient").href = `opskrift_oversigt.html?=${ingredientData.ingredients}`
+    ingredientClone.querySelector(".ingredient img").src = `images/${ingredientData.image}`,
+    ingredientClone.querySelector(".ingredient img").alt = `images of ${ingredientData.image}`,
+    ingredientClone.querySelector(".ingredient p").textContent = ingredientData.name,
+    ingredientClone.querySelector(".ingredient").href = `opskrift_oversigt.html?ingredient=${ingredientData.id}`,
 
     // Indsæt klonerne i dommen
-    document.querySelector(".ingredients-overview-container").appendChild(ingredientClone);
+    document.querySelector(".ingredients-overview-container").appendChild(ingredientClone)
   })
 }
 
