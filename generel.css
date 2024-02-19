@@ -113,3 +113,140 @@ p {
   font-weight: 400;
   font-style: italic;
 } */
+
+/* HEADER */
+.menu.active {
+  display: block;
+  background-color: rgb(211, 186, 186);
+}
+ul {
+  list-style-type: none;
+}
+ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*position: absolute;*/
+  padding: 2rem;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+header ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  justify-content: right;
+  gap: 30px;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 20%;
+  }
+}
+
+/* BURGERMENU */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+
+/* MEDIA QUERY - HEADER */
+@media screen and (min-width: 768px) {
+  header nav ul {
+    padding: 1rem 2rem;
+    padding-left: 1rem;
+  }
+  header nav ul,
+  header nav {
+    display: flex;
+    position: static;
+    list-style: none;
+    padding-bottom: 0.1rem;
+    overflow-x: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  a {
+    font-weight: 50;
+    color: rgb(8, 7, 7);
+    text-decoration: none;
+    text-shadow: 1px 0px 0px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a:hover {
+    color: #ae6e69;
+  }
+  .burger {
+    display: none;
+  }
+}
