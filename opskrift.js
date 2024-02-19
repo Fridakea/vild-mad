@@ -1,5 +1,9 @@
 console.log("oversigt over alle opskrifter");
 
+// til sammenhæng mellem ingrediens og opskrift
+const urlParams = new URLSearchParams(window.location.search);
+const ingredientUrlParam = urlParams.get("ingredient");
+
 // Konstanter og variabler
 const opskriftTemplate = document.querySelector("#opskrifts-template");
 const opskriftsContainer = document.querySelector("#opskrifts-container");
@@ -7,7 +11,8 @@ const seasonFilter = document.querySelector("#season-filter");
 const typeFilter = document.querySelector("#type-filter");
 let data;
 
-fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
+const ingredientRecipeParam = "?select=*,ingredient_recipe(ingredient(*))";
+fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe" + ingredientRecipeParam, {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5aGd6bnl2b3hodWl3cGV0ZGNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4NDE2NTcsImV4cCI6MjAyMzQxNzY1N30.8sKL9HgJTYSl6pgiZbRHk8qLBjPg9ebrnH6VQft3nx0",
@@ -17,6 +22,10 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   .then((fetchedData) => {
     console.log("Fetched Data:", fetchedData);
     data = fetchedData; // Gem data globalt
+    
+    // Filtrerer opskrifter som indeholder ingrediensen med Id = ingredientUrlParam
+    if(ingredientUrlParam) data = data.filter(r => r.ingredient_recipe.some(ir => ir.ingredient.id == ingredientUrlParam));
+
     showRecipe(data); // Kald showRecipe med den oprindelige data
   })
   .catch((error) => console.error("Fejl ved indlæsning af opskrifter:", error));

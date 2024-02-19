@@ -8,6 +8,9 @@ const monthFilter = urlParams.get("month");
 function init() {
   console.log("Url Parameter season: ", seasonFilter);
 
+  const activeMonthFilterElement = document.querySelector(`.month-filter-group .m-${monthFilter}`);
+  if(activeMonthFilterElement) activeMonthFilterElement.classList.add('active-month');
+
   document.querySelector(`.season-title.${seasonFilter}`).classList.add('show');
   document.querySelector(`.season-container.${seasonFilter}`).classList.add('show');
   document.querySelector(`.month-filter-group.${seasonFilter}`).classList.add('show');
@@ -40,13 +43,13 @@ function showIngredient(data) {
     const template = document.querySelector("#ingredient-template");
     const ingredientClone = template.cloneNode(true).content;
 
-    ingredientClone.querySelector(".ingredient img").src = `images/${ingredientData.image}`
-    ingredientClone.querySelector(".ingredient img").alt = `images of ${ingredientData.image}`
-    ingredientClone.querySelector(".ingredient p").textContent = ingredientData.name
-    ingredientClone.querySelector(".ingredient").href = `opskrift_oversigt.html?=${ingredientData.ingredients}`
+    ingredientClone.querySelector(".ingredient img").src = `images/${ingredientData.image}`,
+    ingredientClone.querySelector(".ingredient img").alt = `images of ${ingredientData.image}`,
+    ingredientClone.querySelector(".ingredient p").textContent = ingredientData.name,
+    ingredientClone.querySelector(".ingredient").href = `opskrift_oversigt.html?ingredient=${ingredientData.id}`,
 
     // Indsæt klonerne i dommen
-    document.querySelector(".ingredients-overview-container").appendChild(ingredientClone);
+    document.querySelector(".ingredients-overview-container").appendChild(ingredientClone)
   })
 }
 
