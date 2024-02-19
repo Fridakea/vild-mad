@@ -64,7 +64,7 @@
     & a {
         min-width: 90px;
         max-width: 280px;
-        width: 46%;
+        width: 42%;
     }
 }
 
@@ -72,11 +72,11 @@
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
-    font-weight: bold;
 
     & img {
         border-radius: 40%;
         object-fit: cover;
+        margin-bottom: 10px;
     }
 }
 
@@ -87,17 +87,17 @@
 
 @media (min-width: 650px) {
     .ingredients-overview-container {
-        gap: 50px;
+        gap: 75px;
 
         & a {
             max-width: 300px;
-            width: 27%;
+            width: 25%;
         }
     }
 }
 
 @media (min-width: 950px) {
     .ingredients-overview-container a {
-        width: 20%;
+        width: 18%;
     }
 }

@@ -28,10 +28,6 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe" + ingredientReci
 
 function showExampleRecipe(dataExample) {
   console.log("Recepies");
-<<<<<<< HEAD
-  console.log(dataExample);
-}
-=======
   console.table(dataExample);
 }
 
@@ -54,4 +50,3 @@ links.forEach((link) => {
     menu.classList.remove("active");
   });
 });
->>>>>>> Forside2

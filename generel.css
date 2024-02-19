@@ -83,6 +83,10 @@ p {
   gap: 25px;
 }
 
+.gap-large {
+  gap: 50px;
+}
+
 /** fonte ***/
 
 /* // <uniquifier>: Use a uniquifier for the class name
@@ -124,10 +128,7 @@ ul {
 }
 ul a {
   text-decoration: none;
-<<<<<<< HEAD
-=======
   color: var(--text-color);
->>>>>>> c8ef14b99a01e8beb58f6e4cf733b8a6db358e97
   font-size: 3rem;
 }
 header {
@@ -249,7 +250,7 @@ header ul {
   }
 
   .menu a:hover {
-    color: #ae6e69;
+    color: var(--action-color);
   }
   .burger {
     display: none;
