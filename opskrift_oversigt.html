@@ -31,43 +31,44 @@
 
     <h1>Opskriftsliste</h1>
 
-    <label for="season-filter">Vælg sæson:</label>
-    <select id="season-filter">
-        <option value="all">All</option>
-        <option value="winter">Winter</option>
-        <option value="spring">Spring</option>
-        <option value="fall">Fall</option>
-        <option value="summer">Summer</option>
-    </select>
+    <main>
+        <label for="season-filter">Vælg sæson:</label>
+        <select id="season-filter">
+            <option value="all">All</option>
+            <option value="winter">Winter</option>
+            <option value="spring">Spring</option>
+            <option value="fall">Fall</option>
+            <option value="summer">Summer</option>
+        </select>
 
-    <label for="type-filter">Vælg type:</label>
-    <select id="type-filter">
-        <option value="all">All</option>
-        <option value="bread">Bread</option>
-        <option value="drink">Drink</option>
-        <option value="side dish">Side dish</option>
-        <option value="pasta">Pasta</option>
-        <option value="rice">Rice</option>
-        <option value="dessert">Dessert</option>
-        <option value="soup">Soup</option>
-        <option value="meat replacement">Meat replacement</option>
-    </select>
+        <label for="type-filter">Vælg type:</label>
+        <select id="type-filter">
+            <option value="all">All</option>
+            <option value="bread">Bread</option>
+            <option value="drink">Drink</option>
+            <option value="side dish">Side dish</option>
+            <option value="pasta">Pasta</option>
+            <option value="rice">Rice</option>
+            <option value="dessert">Dessert</option>
+            <option value="soup">Soup</option>
+            <option value="meat replacement">Meat replacement</option>
+        </select>
 
-    <div id="opskrifts-container">
-        <template id="opskrifts-template" class="opskrifter_liste">
-            <a href="#" class="">
-                <article class="opskrifter_article">
-                    <div class="opskrifter_image_container">
-                        <img class="opskrift_image" src="images/" alt="">
-                    </div>
-                    <h3 class="opskrift_name">Opskrift</h3>
-                    <h3 class="opskrift_seasons">Season</h3>
-                    <h3 class="opskrift_type">Type</h3>
-                </article>
-            </a>
-        </template>
-    </div>
-
+        <div id="opskrifts-container">
+            <template id="opskrifts-template" class="opskrifter_liste">
+                <a href="#" class="">
+                    <article class="opskrifter_article">
+                        <div class="opskrifter_image_container">
+                            <img class="opskrift_image" src="images/" alt="">
+                        </div>
+                        <h3 class="opskrift_name">Opskrift</h3>
+                        <h3 class="opskrift_seasons">Season</h3>
+                        <h3 class="opskrift_type">Type</h3>
+                    </article>
+                </a>
+            </template>
+        </div>
+    </main>
     <footer>
         <div>
             <ul>
