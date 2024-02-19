@@ -83,6 +83,10 @@ p {
   gap: 25px;
 }
 
+.gap-large {
+  gap: 40px;
+}
+
 /** fonte ***/
 
 /* // <uniquifier>: Use a uniquifier for the class name
