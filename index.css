@@ -31,19 +31,29 @@
   padding: 15px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-size: 50px;
 }
 
-.kolonne_forside {
+.kolonne_forside h1 {
   background-color: #f7f0e6;
-  padding: 6rem;
+  font-size: 22px;
+  padding: 1rem;
+}
+
+.hero_forside {
+  position: relative;
+}
+
+.img-container {
+  width: 100%;
+  background: center/cover no-repeat;
 }
 
 .scroll-down-btn {
-  position: sticky;
-  top: 20px;
+  position: absolute;
+  top: 86%;
   left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +62,6 @@
   cursor: pointer;
   font-size: 30px;
   transition: transform 0.2s ease;
-  margin-top: -39px;
 }
 
 .scroll-down-btn::before {
