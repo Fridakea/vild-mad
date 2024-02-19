@@ -124,6 +124,10 @@ ul {
 }
 ul a {
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  color: var(--text-color);
+>>>>>>> c8ef14b99a01e8beb58f6e4cf733b8a6db358e97
   font-size: 3rem;
 }
 header {
@@ -136,7 +140,7 @@ header {
 }
 header a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 1rem;
 }
 header ul {
@@ -151,7 +155,7 @@ header ul {
 
 .menu a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   padding-right: 20px;
   font-size: 20px;
   font-family: "Libre Baskerville", serif;
@@ -221,7 +225,7 @@ header ul {
 
   a {
     font-weight: 50;
-    color: rgb(8, 7, 7);
+    color: var(--text-color);
     text-decoration: none;
     text-shadow: 1px 0px 0px;
   }
