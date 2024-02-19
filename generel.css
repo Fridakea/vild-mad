@@ -16,6 +16,7 @@ img {
 main {
   max-width: 1000px;
   margin: auto;
+  padding: 25px;
 }
 
 h1 {
