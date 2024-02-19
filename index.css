@@ -46,6 +46,7 @@
 
 .img-container {
   width: 100%;
+  object-fit: cover;
   background: center/cover no-repeat;
 }
 
