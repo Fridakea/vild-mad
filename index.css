@@ -35,15 +35,27 @@
   font-size: 50px;
 }
 
-.kolonne_forside {
+.kolonne_forside h1 {
   background-color: #f7f0e6;
-  padding: 6rem;
+
+  font-size: 22px;
+}
+
+.hero_forside {
+  position: relative;
+}
+
+.img-container {
+  width: 100%;
+  height: 100vh;
+  background: url("images/Untitled design-4.webp") center/cover no-repeat;
 }
 
 .scroll-down-btn {
-  position: sticky;
-  top: 20px;
+  position: absolute;
+  top: 93%;
   left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +64,6 @@
   cursor: pointer;
   font-size: 30px;
   transition: transform 0.2s ease;
-  margin-top: -39px;
 }
 
 .scroll-down-btn::before {
