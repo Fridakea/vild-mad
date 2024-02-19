@@ -160,7 +160,7 @@ header ul {
   font-size: 1rem;
 }
 
-.logo {
+.logo img {
   width: 30%;
   display: flex;
   align-items: center;
@@ -168,8 +168,11 @@ header ul {
 }
 
 @media screen and (min-width: 768px) {
-  .logo {
-    width: 20%;
+  .logo img {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -233,6 +236,7 @@ header ul {
     padding: 3px;
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
+    padding: 2rem;
   }
 
   .menu li {
