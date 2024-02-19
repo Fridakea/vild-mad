@@ -50,38 +50,20 @@ main div {
   }
 
   & button {
+    cursor: pointer;
     display: inline-block;
-    text-transform: capitalize;
     padding: 5px 20px;
     border: 0;
     background-color: transparent;
-    cursor: pointer;
+    transition: 0.2s;
 
-<<<<<<< HEAD
-    & h2 {
-      transition: 0.2s;
-=======
-    & button {
-        cursor: pointer;
-        display: inline-block;
-        padding: 5px 20px;
-        border: 0;
-        background-color: transparent;
-        transition: 0.2s;
-
-        text-transform: capitalize;
-        color: var(--text-color);
-        font-size: 1.2rem;
-        font-weight: bold;
->>>>>>> 30cd49b47720b44af6ece80e407bdd1e5f502dff
-    }
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }
 
-<<<<<<< HEAD
-.month-filter-group button h2:hover {
-  color: var(--action-color);
-=======
 .month-filter-group {
 
     & .active-month {
@@ -91,7 +73,6 @@ main div {
     & button:hover {
         color: var(--action-color);
     }
->>>>>>> 30cd49b47720b44af6ece80e407bdd1e5f502dff
 }
 
 .ingredients-overview-container {
