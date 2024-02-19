@@ -8,6 +8,9 @@ const monthFilter = urlParams.get("month");
 function init() {
   console.log("Url Parameter season: ", seasonFilter);
 
+  const activeMonthFilterElement = document.querySelector(`.month-filter-group .m-${monthFilter}`);
+  if(activeMonthFilterElement) activeMonthFilterElement.classList.add('active-month');
+
   document.querySelector(`.season-title.${seasonFilter}`).classList.add('show');
   document.querySelector(`.season-container.${seasonFilter}`).classList.add('show');
   document.querySelector(`.month-filter-group.${seasonFilter}`).classList.add('show');
