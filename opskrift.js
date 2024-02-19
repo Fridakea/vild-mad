@@ -61,9 +61,9 @@ function showRecipe(data) {
       let opskriftKlon = opskriftTemplate.cloneNode(true).content;
 
       opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
-      opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
-      opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
-      opskriftKlon.querySelector(".opskrift_type").textContent = `Type: ${opskrift.type}`;
+      opskriftKlon.querySelector(".opskrift_name").textContent = ` ${opskrift.name}`;
+      opskriftKlon.querySelector(".opskrift_seasons").textContent = ` ${opskrift.seasons}`;
+      opskriftKlon.querySelector(".opskrift_type").textContent = ` ${opskrift.type}`;
       opskriftsContainer.appendChild(opskriftKlon);
     });
   }
