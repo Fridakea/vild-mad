@@ -16,10 +16,12 @@
 
 .opskrift_name {
   padding-bottom: 0.7rem;
+  text-transform: capitalize;
 }
 
 .opskrift_seasons {
   padding-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 #oversigt {
@@ -43,4 +45,9 @@ select {
   border-radius: 4px;
   background-color: #fff; /* Baggrundsfarve - ændr efter behov */
   color: #333; /* Tekstfarve - ændr efter behov */
+}
+
+.h1_opskrifter {
+  text-align: center;
+  padding-bottom: 2rem;
 }
