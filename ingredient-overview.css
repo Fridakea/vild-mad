@@ -2,6 +2,14 @@ main div {
     margin-bottom: 25px;
 }
 
+.margin-buttom {
+    margin-bottom: 30px;
+
+    & p {
+        margin-bottom: 10px;
+    }
+}
+
 .season-container p {
     margin-bottom: 20px;
 }
@@ -24,6 +32,10 @@ main div {
     & h1 {
         position: absolute;
     }
+}
+
+.season-title.summer img {
+    object-position: 0 69%;
 }
 
 .season-title:not(.show) {
@@ -72,13 +84,13 @@ main div {
     & img {
         border-radius: 40%;
         object-fit: cover;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        transition: 0.3s;
     }
 }
 
 .ingredient img:hover {
-    border-radius: 40%;
-    border: 5px solid var(--action-color);
+    scale: 1.1;
 }
 
 @media (min-width: 650px) {
