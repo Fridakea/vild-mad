@@ -1,5 +1,10 @@
 console.log("single view - opskrift");
 
+// const urlP = new URLSearchParams(window.location.search);
+// const id = urlP.get("id");
+
+// const produktURL = "https://kea-alt-del.dk/t7/api/products/" + id;
+
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe", {
   method: "GET",
   headers: {
