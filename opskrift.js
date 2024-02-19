@@ -63,7 +63,7 @@ function showRecipe(data) {
       opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
       opskriftKlon.querySelector(".opskrift_name").textContent = `Navn: ${opskrift.name}`;
       opskriftKlon.querySelector(".opskrift_seasons").textContent = `Sæsoner: ${opskrift.seasons}`;
-      opskriftKlon.querySelector(".opskrift_type").textContent = `Type: ${opskrift.type}`;
+      // opskriftKlon.querySelector(".opskrift_type").textContent = `Type: ${opskrift.type}`; - virker ikke da der ikke er et classname som hedder opskrift_type??
       opskriftsContainer.appendChild(opskriftKlon);
     });
   }
