@@ -22,9 +22,9 @@ fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe" + ingredientReci
   .then((fetchedData) => {
     console.log("Fetched Data:", fetchedData);
     data = fetchedData; // Gem data globalt
-    
+
     // Filtrerer opskrifter som indeholder ingrediensen med Id = ingredientUrlParam
-    if(ingredientUrlParam) data = data.filter(r => r.ingredient_recipe.some(ir => ir.ingredient.id == ingredientUrlParam));
+    if (ingredientUrlParam) data = data.filter((r) => r.ingredient_recipe.some((ir) => ir.ingredient.id == ingredientUrlParam));
 
     showRecipe(data); // Kald showRecipe med den oprindelige data
   })
@@ -68,6 +68,8 @@ function showRecipe(data) {
       console.log("Opskrift Type:", opskrift.type);
       // Klon templaten til at vise opskrifter
       let opskriftKlon = opskriftTemplate.cloneNode(true).content;
+
+      opskriftKlon.querySelector("a").href = `recipe.html?name=${opskrift.name}`;
 
       opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
       opskriftKlon.querySelector(".opskrift_name").textContent = ` ${opskrift.name}`;
