@@ -14,7 +14,7 @@ function showExampleIngredient(dataExample) {
 }
 
 // til sammenhæng mellem ingrediens og opskrift
-const ingredientRecipeParam = '?select=*,ingredient_recipe(ingredient(*))';
+const ingredientRecipeParam = "?select=*,ingredient_recipe(ingredient(*))";
 
 // Fetch data om opskrifter
 fetch("https://ayhgznyvoxhuiwpetdcp.supabase.co/rest/v1/recipe" + ingredientRecipeParam, {
