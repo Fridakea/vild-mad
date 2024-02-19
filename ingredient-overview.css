@@ -1,52 +1,66 @@
 main div {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .margin-buttom {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    & p {
-        margin-bottom: 10px;
-    }
+  & p {
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
 }
 
 .season-container p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .season-container:not(.show) {
-    display: none;
+  display: none;
 }
 
 .season-title {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 
-    & img {
-        width: 100%;
-        height: 20vh;
-        filter: opacity(30%);
-        object-fit: cover;
-    }
+  & img {
+    width: 100%;
+    height: 20vh;
+    filter: opacity(30%);
+    object-fit: cover;
+  }
 
-    & h1 {
-        position: absolute;
-    }
+  & h1 {
+    position: absolute;
+  }
 }
 
 .season-title.summer img {
-    object-position: 0 69%;
+  object-position: 0 69%;
 }
 
 .season-title:not(.show) {
-    display: none;
+  display: none;
 }
 
 .month-navigation {
-    & .month-filter-group:not(.show) {
-        display: none;
-    }
+  & .month-filter-group:not(.show) {
+    display: none;
+  }
 
+  & button {
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 5px 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+<<<<<<< HEAD
+    & h2 {
+      transition: 0.2s;
+=======
     & button {
         cursor: pointer;
         display: inline-block;
@@ -59,9 +73,15 @@ main div {
         color: var(--text-color);
         font-size: 1.2rem;
         font-weight: bold;
+>>>>>>> 30cd49b47720b44af6ece80e407bdd1e5f502dff
     }
+  }
 }
 
+<<<<<<< HEAD
+.month-filter-group button h2:hover {
+  color: var(--action-color);
+=======
 .month-filter-group {
 
     & .active-month {
@@ -71,49 +91,50 @@ main div {
     & button:hover {
         color: var(--action-color);
     }
+>>>>>>> 30cd49b47720b44af6ece80e407bdd1e5f502dff
 }
 
 .ingredients-overview-container {
-    margin: 0;
-    flex-wrap: wrap;
+  margin: 0;
+  flex-wrap: wrap;
 
-    & a {
-        min-width: 90px;
-        max-width: 280px;
-        width: 42%;
-    }
+  & a {
+    min-width: 90px;
+    max-width: 280px;
+    width: 42%;
+  }
 }
 
 .ingredient {
-    text-decoration: none;
-    text-align: center;
-    text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
 
-    & img {
-        border-radius: 40%;
-        object-fit: cover;
-        margin-bottom: 15px;
-        transition: 0.3s;
-    }
+  & img {
+    border-radius: 40%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: 0.3s;
+  }
 }
 
 .ingredient img:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 @media (min-width: 650px) {
-    .ingredients-overview-container {
-        gap: 75px;
+  .ingredients-overview-container {
+    gap: 75px;
 
-        & a {
-            max-width: 300px;
-            width: 25%;
-        }
+    & a {
+      max-width: 300px;
+      width: 25%;
     }
+  }
 }
 
 @media (min-width: 950px) {
-    .ingredients-overview-container a {
-        width: 18%;
-    }
+  .ingredients-overview-container a {
+    width: 18%;
+  }
 }
