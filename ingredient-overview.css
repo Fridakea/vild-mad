@@ -1,9 +1,5 @@
-.content {
-    padding: 25px;
-
-    & div {
-        margin-bottom: 25px;
-    }
+main div {
+    margin-bottom: 25px;
 }
 
 .season-container p {
