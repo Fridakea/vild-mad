@@ -238,12 +238,14 @@ header ul {
     align-items: center;
   }
 
+  /*
   a {
     font-weight: 50;
     color: var(--text-color);
     text-decoration: none;
     text-shadow: 1px 0px 0px;
   }
+  */
 
   header {
     display: flex;
