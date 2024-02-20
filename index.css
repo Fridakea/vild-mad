@@ -1,6 +1,6 @@
 .sæsoner_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 1rem;
   width: 100%;
 }
@@ -15,11 +15,6 @@
   position: relative;
   object-fit: cover;
   aspect-ratio: 4/3;
-}
-
-.sæsoner img:hover {
-  transform: scale(1.05); /* Adjust the scale value as per your preference */
-  transition: transform 0.3s ease; /* Add a smooth transition for a gradual effect */
 }
 
 .sæsoner {
@@ -43,7 +38,7 @@
 .kolonne_forside h1 {
   background-color: #f7f0e6;
   font-size: 22px;
-  padding: 1rem;
+  margin: 45px 20px 45px 20px;
 }
 
 .hero_forside {
