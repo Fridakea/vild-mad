@@ -289,7 +289,8 @@ footer {
 footer li a,
 footer li {
   list-style: none;
-  /* margin: 20px 0 20px 50px; */
+  margin: 20px 0 15px 10px;
+
   text-decoration: none;
   color: #fdf8f6;
   font-size: 1.2rem;
