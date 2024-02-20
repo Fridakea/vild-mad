@@ -17,6 +17,11 @@
   aspect-ratio: 4/3;
 }
 
+.sæsoner img:hover {
+  transform: scale(1.05); /* Adjust the scale value as per your preference */
+  transition: transform 0.3s ease; /* Add a smooth transition for a gradual effect */
+}
+
 .sæsoner {
   position: relative;
   margin-bottom: 30px;
