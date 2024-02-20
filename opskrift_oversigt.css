@@ -15,7 +15,6 @@
   text-transform: capitalize;
   padding-bottom: 0.5rem;
   padding-top: 1.5rem;
-  text-decoration: none;
 }
 
 .opskrift_seasons {
@@ -28,15 +27,15 @@
   text-transform: capitalize;
 }
 
+.opskrifts_link {
+  text-decoration: none;
+}
+
 #oversigt {
   text-align: center;
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
-}
-
-.opskrift_name {
-  text-decoration: none;
 }
 
 /* Styling til label og select */

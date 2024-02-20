@@ -1,7 +1,7 @@
 .sæsoner_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  column-gap: 25px;
   width: 100%;
 }
 
@@ -15,11 +15,11 @@
   position: relative;
   object-fit: cover;
   aspect-ratio: 4/3;
+  transition: 0.3s;
 }
 
 .sæsoner img:hover {
-  transform: scale(1.05); /* Adjust the scale value as per your preference */
-  transition: transform 0.3s ease; /* Add a smooth transition for a gradual effect */
+  scale: 1.1;
 }
 
 .sæsoner {
@@ -38,12 +38,20 @@
   text-align: center;
   border-radius: 10px;
   font-size: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#nextSection {
+  max-width: 1050px;
+  margin: auto;
+  padding: 25px;
 }
 
 .kolonne_forside h1 {
   background-color: #f7f0e6;
   font-size: 22px;
-  padding: 1rem;
+  margin: 45px 20px 45px 20px;
 }
 
 .hero_forside {
@@ -81,4 +89,16 @@
   display: inline-block;
   padding: 7px;
   transform: rotate(45deg);
+}
+
+@media (min-width: 700px) {
+  .sæsoner_grid {
+    column-gap: 50px;
+    row-gap: 25px;
+  }
+
+  #nextSection {
+    max-width: 1100px;
+    padding: 50px;
+  }
 }
