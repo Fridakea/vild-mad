@@ -1,138 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Side</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="generel.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ Side</title>
-  <link rel="stylesheet" href="faq.css" />
-  <link rel="stylesheet" href="generel.css" />
-</head>
-
-<header>
-  <div class="logo">
-    <a href="index.html"><img src="images/logo_vildmad.svg" alt="logo"></a>
-  </div>
-  <nav class="navbar">
-    <ul class="menu">
-      <li><a href="FAQ.html">Questions about foraging in the forest</a></li>
-      <li><a href="opskrift_oversigt.html">Recipes</a></li>
-    </ul>
-  </nav>
-  <div class="burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-</header>
-
-<body>
-  <h1>Frequently Asked Questions</h1>
-
-  <main>
-    <div class="container">
-      <div class="box" id="box1">
-        <img src="images/berries.svg" alt="Berries" loading="lazy" />
-        <h2>Leaves and shoots</h2>
-        <div class="text">
-          <p>
-            Where can I pick leaves and shoots? If you are after leaves and
-            shoots from trees, it is important that you determine who owns the
-            area you are foraging in, and ask for their permission. For example,
-            the vast majority of spruce plantations are commercial, so it is
-            possible that the pine forest you’re exploring is private property.
-            When are the leaves and shoots best? The shoots on trees are best
-            right before they open, and the leaves are best when they are bright
-            green and have a matte surface. Spruce shoots are best when bright
-            green, and soft and rubbery to the touch. What kind of equipment do
-            I need to forage leaves and shoots? A pair of scissors and a
-            container (or bag) is all you’ll need. How do I pick leaves and
-            shoots? You can pick the fresh leaves directly from the tree or
-            bush. Shoots from deciduous trees that have yet to open can be
-            gently plucked off the branches with your fingers to avoid damaging
-            the rest of the branch. Carefully snip off shoots just above the
-            outermost light green spot. It can be tough on the plant or tree to
-            have its leaves and shoots cut off, so always take a smaller amount
-            from several branches or plants, rather than all from a single one.
-            Put the plant parts in small plastic bags or containers, and avoid
-            exposing them to direct sunlight. If you store the leaves in bags,
-            wrap a wet towel around them to keep your harvest cool on the way
-            home. How do I clean leaves and shoots? Rinse carefully and let them
-            dry in open air.
-          </p>
-        </div>
-      </div>
-      <div class="box" id="box2">
-        <img src="images/elderflower.svg" alt="Category 2" loading="lazy" />
-        <h2>Category 2</h2>
-        <div class="text">
-          <p>
-            Text for Category 2. Vestibulum tincidunt cursus enim, quis
-            vestibulum justo condimentum et. Nam elementum lectus vitae nibh
-            consequat.
-          </p>
-        </div>
-      </div>
-      <div class="box" id="box3">
-        <img src="images/fruit.svg" alt="Category 3" loading="lazy" />
-        <h2>Category 3</h2>
-        <div class="text">
-          <p>
-            Text for Category 3. Phasellus auctor turpis non nunc cursus, auctor
-            sodales augue gravida. Vivamus hendrerit, odio eget viverra sodales.
-          </p>
-        </div>
-      </div>
-      <div class="box" id="box4">
-        <img src="images/herbs.svg" alt="Category 4" loading="lazy" />
-        <h2>Category 4</h2>
-        <div class="text">
-          <p>
-            Text for Category 4. Duis non fringilla mi. Mauris sed magna ut nisi
-            vehicula feugiat. Nulla malesuada, lectus vitae feugiat tincidunt.
-          </p>
-        </div>
-      </div>
-      <div class="box" id="box5">
-        <img src="images/leaf.svg" alt="Category 5" loading="lazy" />
-        <h2>Category 5</h2>
-        <div class="text">
-          <p>
-            Text for Category 5. Aliquam sit amet efficitur purus. Etiam
-            dignissim sem eu pulvinar sodales. Nunc efficitur ex nec congue.
-          </p>
-        </div>
-      </div>
-      <div class="box" id="box6">
-        <img src="images/mushroom.svg" alt="Category 6" loading="lazy" />
-        <h2>Category 6</h2>
-        <div class="text">
-          <p>
-            Text for Category 6. Fusce vel libero justo. Proin volutpat, ipsum
-            eget vestibulum posuere, odio velit blandit ante, vitae aliquam
-            quam.
-          </p>
-        </div>
-      </div>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo_vildmad.svg" alt="logo" /></a>
     </div>
-  </main>
-
-  <footer>
-    <div>
-      <ul>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="FAQ.html">Questions about foraging in the forest</a></li>
         <li><a href="opskrift_oversigt.html">Recipes</a></li>
-        <li><a href="FAQ.html">Common Questions</a></li>
       </ul>
+    </nav>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
-    <div class="some">
-      <a href="https://www.instagram.com/vildmaddk/" target="_blank" loading="lazy"><img src="images/instagram.svg"
-          alt="Instagram link"></a>
-      <a href="https://www.facebook.com/vildmaddk" target="_blank" loading="lazy"><img src="images/facebook.svg"
-          alt="Facebook link"></a>
-    </div>
-  </footer>
-  <script src="faq.js"></script>
-  <script src="index.js"></script>
-</body>
+  </header>
 
+  <body>
+    <h1>Frequently Asked Questions</h1>
+    <main>
+      <div class="container">
+        <div class="box" id="box1">
+          <img src="images/berries.svg" alt="Berries" loading="lazy" />
+          <h2>Berries</h2>
+          <div class="overlay" id="overlay1">
+            <div class="overlay-content" id="overlay-content1">
+              <div class="text">
+                <p>
+                  <strong
+                    >What kind of equipment do I need to pick berries?</strong
+                  >
+                  <br />
+                  <br />
+                  Bring several shallow containers with lids. Segregate the
+                  berries by container, so the very ripe and soft berries that
+                  will easily get squished (ideal for jam or juice) go in one,
+                  and the sturdy berries you can use whole go in another.
+                  <br />Be careful not to put too many berries on top of each
+                  other—those on the bottom will soon be crushed. <br />If you
+                  are out picking raspberries, blackberries or sea buckthorn,
+                  which all have nasty thorns, bring gloves and wear long
+                  sleeves and pants to avoid cuts and scratches.<br />
+                  <br />
+                  <strong> How do I clean the berries?</strong> <br />
+                  <br />Clean the berries as soon as you get home by rinsing
+                  them carefully in a colander, and leave them out to dry on a
+                  piece of cloth. If you have a batch comprising both whole and
+                  smashed berries, put a dry dish towel over a cutting board,
+                  tilt the board, and pour the berries down the makeshift ramp.
+                  <br />The smashed berries will have a tendency to stick to the
+                  tea towel, while the whole berries will trickle down and land
+                  on the table.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box2">
+          <img src="images/elderflower.svg" alt="flowers" loading="lazy" />
+          <h2>Flowers</h2>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlay-content">
+              <div class="text">
+                <p>
+                  <strong
+                    >What kind of equipment do I need to pick flowers?
+                  </strong>
+                  <br />
+                  <br />
+                  Bring a pair of scissors to cut the stalks, as well as a
+                  basket with a moist kitchen towel in the bottom, where the
+                  flowers can breathe and avoid getting squished. You can also
+                  use plastic containers with a moist paper towel instead.<br />
+                  <br />
+
+                  <strong>How do I pick flowers? </strong> <br /><br />You can
+                  remove most flowers with your fingers, and only get the flower
+                  head without damaging the rest of the plant. Carefully put the
+                  flower heads on the moist surface. <br />If you bring many
+                  flowers in the same container, separate them into layers with
+                  the moist paper towels. <br />
+                  <br />
+                  <strong>How do I clean flowers?</strong> <br />
+                  <br />
+                  The dominant flavor in flowers comes from the pollen and
+                  nectar, which are easily rinsed away. Instead of washing them,
+                  put the freshly picked flowers on a moist kitchen towel near
+                  an open window so small insects can fly or crawl away.
+                  <br />Some flowers (like elderflower) have very bitter stalks,
+                  so cut them off as close to the flower head as possible, and
+                  remove any remnants of grass and withered leaves.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" id="box3">
+          <img src="images/fruit.svg" alt="Category 3" loading="lazy" />
+          <h2>Fruit</h2>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlay-content">
+              <div class="text">
+                <p>
+                  <strong>
+                    What kind of equipment do I need to pick fruit?</strong
+                  >
+                  <br />
+                  <br />
+                  A fruit picker can be a big help when trying to reach fruits
+                  on trees—a ladder or a strong crate to stand on is also an
+                  option. Bring a basket or box to carry the fruits. If you plan
+                  to pick enough to fill several boxes, it helps if they can be
+                  stacked. <br />Don’t pile your harvest too high, or the fruits
+                  on the bottom will be crushed. But they also need to be packed
+                  snug to avoid spilling during transportation. <br />If you are
+                  moving the fruit over long distances, it is a good idea to
+                  wrap them in newspapers so they don't roll around and get
+                  bruised. <br />
+                  <br />
+                  <br /><strong>How do I pick fruit? </strong><br />
+                  <br />Fruits are ready for picking if you twist them 360
+                  degrees and they let go of the branch without a struggle. If
+                  they hold fast, they are not ripe yet, and should be left on
+                  the branch. Ripe fruit has dark brown or almost black seeds,
+                  while immature seeds will be lighter. <br />Be careful not to
+                  bruise the ripe fruits when picking them: even a small bump
+                  can attract mold. <br />
+                  <br />
+                  <strong>How do I store fruit?</strong> <br />
+                  <br />Every fruit has its own storage needs, but most prefer
+                  dry, dark, and cold places. Apples and pears keep for months
+                  if you store them correctly. <br />Regularly check your fruits
+                  for mold, and remove any affected specimens as quickly as
+                  possible to avoid spoiling the rest of the harvest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box4">
+          <img src="images/herbs.svg" alt="Category 4" loading="lazy" />
+          <h2>Herbs</h2>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlay-content">
+              <div class="text">
+                <p>
+                  <strong>When should I forage for herbs?</strong> <br />
+                  <br />
+                  Most herbs have several parts that are edible — as long as
+                  they are green - but different parts are good at different
+                  times. <br />
+                  Initially, the herb will make leaves that are fresh and full
+                  of flavor. But eventually the herb will shift its efforts to
+                  flowering, often causing the leaves to become bitter and
+                  develop a woody consistency—especially if exposed to direct
+                  sunlight. <br />Finally, at the end of its cycle, an herb will
+                  produce tasty seeds.<br />
+                  <br />
+                  <strong>
+                    What kind of equipment do I need when foraging herbs?
+                  </strong>
+                  <br />
+                  <br />Bring gloves in case you find stinging nettles, a
+                  vegetable knife or small pair of scissors for cutting tough
+                  stalks without destroying the plant, and bags or containers
+                  with lids of different sizes for storage. <br />Finally, bring
+                  a backpack or basket to carry everything you harvest. <br />
+                  <br />
+                  <strong>How do I pick herbs? </strong> <br />
+                  <br />When it comes to weeds, you can bring home the whole
+                  plant and cut the stalk just above the ground. When picking
+                  herbs it is best to snip or cut right above a set of leaves on
+                  the stem, so the plant can regrow. Put the parts of the plant
+                  in the small bags or containers with a lid, and avoid exposing
+                  them to direct sunlight. <br />If you’re storing your harvest
+                  in a bag, wrap a wet towel around it to keep the plants cool
+                  on the way home.<br />
+                  <br />
+                  <strong> How do I clean herbs?</strong> <br />
+                  <br />
+                  Clean the herbs with cold water as soon as you get home,
+                  dividing them into several batches for easy cleaning and to
+                  avoid squishing each other. A salad spinner makes it easy, but
+                  you can also use a strainer under running water. <br />
+                  Be careful when cleaning some of the more delicate herbs, so
+                  they don’t break. Wash them carefully and put them on a
+                  kitchen towel to air dry for half an hour. <br />
+                  <br />
+                  <strong
+                    >Do I need to be careful of anything when foraging
+                    herbs?</strong
+                  >
+                  <br />
+                  <br />You can eat most herbs, but they are not all tasty, and
+                  a few are poisonous. Study toxic varieties in the area before
+                  you pick, and never take an herb if you are in doubt. Ramson,
+                  for example, looks a bit like the poisonous lily of the
+                  valley.<br />
+                  Be particularly careful with plants from the carrot family,
+                  which comprises poisonous plants like hemlock, fool's parsley,
+                  or cowbane.<br />
+                  <br />
+                  <strong>How do I store herbs?</strong> <br />
+                  <br />
+                  Most herbs keep for a couple of weeks in the fridge in an
+                  airtight container. Put a moist piece of cloth in the bottom
+                  of the container, and don't pack the herbs very snug.
+                  <br /><br />Some herbs can be dried without losing any flavor,
+                  if you want to extend their shelf life. To do this, use a
+                  fan-assisted oven with the door open, using the fan but no
+                  heat. Turn them once in a while and in a day or two they
+                  should be completely dry. At that point, pack them in hermetic
+                  containers to avoid any fungus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box5">
+          <img src="images/leaf.svg" alt="Category 5" loading="lazy" />
+          <h2>Leaves and shoots</h2>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlay-content">
+              <div class="text">
+                <p>
+                  <strong>Where can I pick leaves and shoots? </strong> <br />
+                  <br />If you are after leaves and shoots from trees, it is
+                  important that you determine who owns the area you are
+                  foraging in, and ask for their permission. <br />For example,
+                  the vast majority of spruce plantations are commercial, so it
+                  is possible that the pine forest you’re exploring is private
+                  property.<br /><br />
+                  <strong>When are the leaves and shoots best? </strong>
+                  <br />
+                  <br />The shoots on trees are best right before they open, and
+                  the leaves are best when they are bright green and have a
+                  matte surface. Spruce shoots are best when bright green, and
+                  soft and rubbery to the touch. <br />
+                  <br />
+                  <strong
+                    >What kind of equipment do I need to forage leaves and
+                    shoots?</strong
+                  >
+                  <br />
+                  <br />
+                  A pair of scissors and a container (or bag) is all you’ll
+                  need. <br />
+                  <br />
+                  <strong>How do I pick leaves and shoots? </strong> <br />
+                  <br />You can pick the fresh leaves directly from the tree or
+                  bush. Shoots from deciduous trees that have yet to open can be
+                  gently plucked off the branches with your fingers to avoid
+                  damaging the rest of the branch. Carefully snip off shoots
+                  just above the outermost light green spot. <br />It can be
+                  tough on the plant or tree to have its leaves and shoots cut
+                  off, so always take a smaller amount from several branches or
+                  plants, rather than all from a single one. Put the plant parts
+                  in small plastic bags or containers, and avoid exposing them
+                  to direct sunlight. <br />If you store the leaves in bags,
+                  wrap a wet towel around them to keep your harvest cool on the
+                  way home. <br />
+                  <br />
+                  <strong>How do I clean leaves and shoots?</strong> <br />
+                  <br />
+                  Rinse carefully and let them dry in open air.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box6">
+          <img src="images/mushroom.svg" alt="Category 6" loading="lazy" />
+          <h2>Mushroom</h2>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlay-content">
+              <div class="text">
+                <p>
+                  <strong>What kinds of mushroom can I find? </strong> <br />
+                  <br />
+                  There are many different types of mushroom, each with their
+                  own unique look.
+                  <br />However, most mushrooms are identifiable by their stem
+                  and cap. <br />Under the cap are either gills or pores. Pores
+                  are small holes, and gills look like strings going from the
+                  outer rim of the cap to the stem. <br />Generally, mushrooms
+                  with pores under their caps (<strong>boletaceae</strong>) are
+                  edible and tasty, and there is virtually no risk in picking
+                  and eating them. <br />You need to be more careful with gilled
+                  mushrooms: they can be delicious, but a lot of them have a
+                  foul taste, and some are poisonous. Many other mushrooms don't
+                  look like mushrooms at all, but can be eaten —if you know how
+                  to handle them. <br />
+                  <br />
+                  <strong
+                    >What kind of equipment do I need to pick mushrooms?
+                  </strong>
+                  <br />
+                  <br />A small knife, a brush, and a capacious basket are the
+                  most important tools for a mushroom hunt. <br />
+                  <br />
+
+                  <strong>How do I pick the mushrooms?</strong> <br />
+                  <br />
+                  Any mushroom with a thick stem (such as boletaceae) can be cut
+                  at its base. Mushrooms with more fragile stems should be
+                  picked by hand. Before putting it in your basket, carve open
+                  the mushroom to make sure it is not infested with worms.
+                  <br />
+                  <br />
+                  <strong>How do I clean mushrooms?</strong> <br />
+                  <br />
+                  Use your brush to remove leaves or dirt from the mushrooms
+                  before putting them in the basket. When you get home, you can
+                  clean them more thoroughly with the brush, but rinsing them in
+                  water should be a last resort: mushrooms soak up liquid,
+                  turning the springy meat dull and soggy. <br />
+                  <br />
+                  <strong
+                    >Do I need to be careful of anything when foraging
+                    mushrooms?</strong
+                  >
+                  <br />
+                  <br />
+                  Both the death cap and the European destroying angel are
+                  common, and potentially deadly. Less toxic mushroom varieties
+                  will give you stomach aches. In sum, only eat the mushroom if
+                  you are certain which type it is. <br />If there is any doubt,
+                  there is no doubt: leave unidentified fungi alone. <br />
+                  <br />
+                  <strong>How do I store mushrooms? </strong> <br />
+                  <br />Fresh mushrooms should be stored in the fridge, in a
+                  paper bag or similar container that lets them breathe. Most
+                  mushrooms keep for three to four days when stored this way,
+                  but boletaceae quickly become flaccid and rubbery, thus
+                  demanding immediate consumption. <br />A lot of mushrooms can
+                  be frozen or dried if you want to extend the mushroom season
+                  in your kitchen. Thawed or macerated mushrooms might not be as
+                  interesting as their fresh kin, but they are perfect in stews
+                  and risotto. <br />
+                  <br />
+                  <strong>How do I dry mushrooms?</strong> <br />
+                  <br />
+                  Not all mushrooms tolerate being dried, so first be sure their
+                  type is amenable to the process. Quick drying takes four to
+                  five hours at 50C in a fan-assisted oven. <br />Cut the
+                  mushrooms into thin slices before putting them in the oven.
+                  Open the door once in a while to let the steam out. You can
+                  also dry the mushrooms on a heater for about 24 hours, or
+                  simply put them on a paper towel in a room with a draft for a
+                  couple of days. <br />Dried mushrooms can be stored in an
+                  airtight container for about a year, and can be macerated in
+                  water in a couple of hours. <br />
+                  <br />
+                  <strong> How do I freeze mushrooms? </strong> <br />
+                  <br />If you want to freeze the mushrooms you should cut them
+                  into smaller bits and blanch or fry them for a couple of
+                  minutes. The frozen mushrooms will keep for up to a year, if
+                  you haven't used any fat in the frying pan.<br />
+                  If you fry them in fat before freezing them, they only keep
+                  for half that time; the upside to using fat is that you can
+                  take them from the freezer and pour them directly into your
+                  dish.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <ul>
+          <li><a href="opskrift_oversigt.html">Recipes</a></li>
+          <li><a href="FAQ.html">Common Questions</a></li>
+        </ul>
+      </div>
+      <div class="some">
+        <a
+          href="https://www.instagram.com/vildmaddk/"
+          target="_blank"
+          loading="lazy"
+          ><img src="images/instagram.svg" alt="Instagram link"
+        /></a>
+        <a
+          href="https://www.facebook.com/vildmaddk"
+          target="_blank"
+          loading="lazy"
+          ><img src="images/facebook.svg" alt="Facebook link"
+        /></a>
+      </div>
+    </footer>
+    <script src="faq.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
