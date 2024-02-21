@@ -313,6 +313,11 @@ footer li a:hover {
   /* justify-content: center; */
 }
 
+.some img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 800px) {
   .none {
     display: none;

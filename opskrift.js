@@ -69,7 +69,7 @@ function showRecipe(data) {
       // Klon templaten til at vise opskrifter
       let opskriftKlon = opskriftTemplate.cloneNode(true).content;
 
-      opskriftKlon.querySelector("a").href = `recipe.html?name=${opskrift.name}`;
+      opskriftKlon.querySelector("a").href = `recipe.html?id=${opskrift.id}`;
 
       opskriftKlon.querySelector(".opskrift_image").src = `images/${opskrift.image}`;
       opskriftKlon.querySelector(".opskrift_name").textContent = ` ${opskrift.name}`;
