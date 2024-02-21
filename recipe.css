@@ -151,7 +151,7 @@ h3 {
 
 .ingredients_container {
   max-height: 400px;
-  max-width: 250px;
+  max-width: 200px;
   column-count: auto;
   column-width: 5rem;
   column-gap: 20px;
