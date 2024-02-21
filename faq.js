@@ -21,34 +21,32 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+  });
 
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', function (event) {
-            if (event.target === overlay) {
-                closeOverlay(overlay);
-                activeOverlay = null;
-            }
-        });
+  overlays.forEach((overlay) => {
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) {
+        closeOverlay(overlay);
+      }
     });
+  });
 
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.box') && !event.target.closest('.overlay-content')) {
-            closeOverlay(activeOverlay);
-            activeOverlay = null;
-        }
+  document.addEventListener("click", function (event) {
+    overlays.forEach((overlay) => {
+      if (!event.target.closest(".box") && !event.target.closest(".overlay-content")) {
+        closeOverlay(overlay);
+      }
     });
+  });
 
-    function toggleOverlay(overlay) {
-        overlay.classList.toggle('active');
-    }
+  function toggleOverlay(overlay) {
+    overlay.classList.toggle("active");
+  }
 
-    function closeOverlay(overlay) {
-        if (overlay) {
-            overlay.classList.remove('active');
-        }
-    }
+  function closeOverlay(overlay) {
+    overlay.classList.remove("active");
+  }
 
-    function updateOverlayContent(overlayContent, text) {
-        overlayContent.innerHTML = text;
-    }
-});
+  function updateOverlayContent(overlayContent, text) {
+    overlayContent.innerHTML = text;
+  }
