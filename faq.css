@@ -1,3 +1,7 @@
+.text-center {
+  text-align: center;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -14,22 +18,23 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  transition: 0.3s;
 }
 
+/*
 .box:hover {
   scale: 1.1;
 }
+*/
 
 .box img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-.flower {
-  width: 200px; /* Angiver bredden til 200 pixels */
-  height: auto; /* Lader højden skaleres proportionalt */
+.box img:hover {
+  scale: 1.1;
 }
 
 .text {
@@ -101,4 +106,10 @@ h1.fag {
 
 .overlay.active {
   display: block;
+}
+
+@media (min-width: 650px) {
+  .box {
+    width: calc(50% - 200px);
+  }
 }
