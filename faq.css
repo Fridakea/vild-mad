@@ -14,6 +14,17 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  transition: 0.3s;
+}
+
+@media (min-width: 650px) {
+  .box {
+    width: calc(50% - 200px);
+  }
+}
+
+.box:hover {
+  scale: 1.1;
 }
 
 .box img {
