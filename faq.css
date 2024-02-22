@@ -87,6 +87,7 @@ h1.fag {
   max-width: 800px;
   max-height: 80%;
   overflow: auto;
+  text-align: left;
 }
 
 .overlay {
