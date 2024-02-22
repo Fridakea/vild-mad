@@ -46,6 +46,7 @@
   max-width: 1050px;
   margin: auto;
   padding: 25px;
+  padding-top: 0;
 }
 
 .kolonne_forside h1 {

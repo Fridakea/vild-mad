@@ -281,10 +281,10 @@ footer {
   height: auto;
   width: auto;
   padding: 20px 0 20px 0;
-
   display: flex;
   justify-content: space-between;
   font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
 }
 
 footer li a,
