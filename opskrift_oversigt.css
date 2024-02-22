@@ -9,6 +9,11 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3/3;
+  transition: 0.3s;
+}
+
+.opskrift_image:hover {
+  scale: 1.1;
 }
 
 .opskrift_name {
