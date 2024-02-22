@@ -5,7 +5,7 @@
 }
 
 .box {
-  width: calc(50% - 200px);
+  width: calc(50% - 20px);
   max-width: 300px;
   margin: 10px;
   padding: 10px;
@@ -15,6 +15,12 @@
   transition: all 0.3s ease;
   position: relative;
   transition: 0.3s;
+}
+
+@media (min-width: 650px) {
+  .box {
+    width: calc(50% - 200px);
+  }
 }
 
 .box:hover {
